@@ -11,11 +11,21 @@ public class OrderEntity {
     @Column(name = "id")
     int id;
 
+
     @Column(name = "orderNum")
     String orderNum;
 
+
     @Column(name = "user_id")
     String userId;
+
+
+    @JoinColumn(name = "t_plan", referencedColumnName = "cg_code")
+    int cgCode;
+
+    @JoinColumn(name = "t_plan", referencedColumnName = "planCode")
+    int planCode;
+
 
     public int getId() {
         return id;
